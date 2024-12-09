@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "schedule_timings",
+  "info": {
+    "singularName": "schedule-timing",
+    "pluralName": "schedule-timings",
+    "displayName": "schedule timing"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Day": {
+      "type": "string"
+    },
+    "Timies": {
+      "type": "json"
+    }
+  }
+}
