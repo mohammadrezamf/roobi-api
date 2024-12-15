@@ -1,7 +1,24 @@
-/**
- * otp router
- */
-
-import { factories } from '@strapi/strapi';
-
-export default factories.createCoreRouter('api::otp.otp');
+export default {
+    routes: [
+        {
+            method: 'POST',
+            path: '/otp/send',
+            handler: 'api::otp.otp.sendOTP',
+            config: {
+                auth: false, // Allow unauthenticated access
+                policies: [], // Optional: Add Strapi policies
+                middlewares: [], // Optional: Add middlewares
+            },
+        },
+        {
+            method: 'POST',
+            path: '/otp/verify',
+            handler: 'api::otp.otp.verifyOTP',
+            config: {
+                auth: false, // Allow unauthenticated access
+                policies: [],
+                middlewares: [],
+            },
+        },
+    ],
+};
